@@ -7,7 +7,7 @@ from skimage.color import rgb2gray
 import os.path
 
 IMAGE_DIR = "/remote_data"
-#IMAGE_DIR = "~/bdp2-2021/cloud_storage/local_data"
+#IMAGE_DIR = "/home/enigma/bdp2-2021/cloud_storage/local_data" #"~/bdp2-2021/cloud_storage/local_data"
 #IMAGE_DIR = "/bucket_data"
 
 def convert(filename):
@@ -24,7 +24,7 @@ def convert(filename):
         print("Processing file " + read_name)
 
 
-    original = io.imread('taipei.jpg')
+    original = io.imread(read_name)
     grayscale = rgb2gray(original)
     fig, axes = plt.subplots(1, 2, figsize=(8, 4))
     ax = axes.ravel()
